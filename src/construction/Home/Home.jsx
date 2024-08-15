@@ -2,6 +2,8 @@ import React from 'react'
 
 import './Home.css'
 
+import { motion } from "framer-motion";
+
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -15,26 +17,49 @@ const Home = () => {
             {/* Lado esquerdo, texto de apresentação */}
             <div class="lado_esquerdo">
 
-                <div >
-                    <p class="text_1 slide-in-left">Olá, eu sou</p>
-                </div>
+                <motion.div
+                    initial={{ x: -1000 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    <p class="text_1">Olá, eu sou</p>
+                </motion.div>
 
-                <div class="text_2 slide-in-left">
+                <motion.div 
+                    class="text_2"
+                    initial={{ x: -1000 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 2 }}
+                >
                     <p>Gabriel Mazzuco</p>
-                </div>
+                </motion.div>
 
-                <div class="text_3 slide-in-left">
+                <motion.div class="text_3"
+                    initial={{ x: -1000 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 2.5 }}
+                >
                     <p>Desenvolvedor Back e Front-end</p>
-                </div>
+                </motion.div>
                 
-                <div class="text_4 slide-in-bottom">
+                <motion.div class="text_4"
+                    initial={{ x: -1000 }}
+                    animate={{ x: 0 }}
+                    transition={{ duration: 3 }}
+                >
                     <p>
                         Sou um graduando em Ciencias da Computação pela Universidade Estadual do Oeste do Paraná (UNIOESTE).
                         Tenho experiência com desenvolvimento de software, tanto na parte de front-end quanto na parte de back-end.
                     </p>
-                </div>
+                </motion.div>
 
-                <div class="lado_esquerdo_botoes slide-in-bottom"> 
+                <motion.div 
+                    class="lado_esquerdo_botoes"
+                    initial={{ y: +500 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 2 }}
+                    
+                > 
                     
                     
                     <a href="https://www.instagram.com/gabriel_mazzuco11/" class="button_instagram" target="_blank">
@@ -52,16 +77,21 @@ const Home = () => {
                         <p class="text">Github</p>
                     </a>
                                     
-                </div>
+                </motion.div>
 
             </div>
 
             {/* Lado direito, imagem */}
-            <div class="photo slide-in-right">
+            <motion.div class="photo"
+                initial={{ x: 1000 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 2 }}
+            
+            >
                 <div class="image_card">
                     <img src='https://i.imgur.com/yrmvRt5.jpg' alt="Perfil"/>
                 </div>
-            </div>
+            </motion.div>
 
         </div>
     )

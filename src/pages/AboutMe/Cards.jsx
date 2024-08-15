@@ -1,7 +1,6 @@
-import React from 'react'
-import './Projects.css'
+import React from "react";
+import "./AboutMe.css";
 
-// Imports dos ícones
 import { FaPython } from "react-icons/fa";
 import { SiGnubash } from "react-icons/si";
 import { SiMicrosoftexcel } from "react-icons/si";
@@ -18,10 +17,23 @@ import { SiVite } from "react-icons/si";
 import { SiNumba } from "react-icons/si";
 import { TbHexagonLetterC } from "react-icons/tb";
 import { SiAssemblyscript } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
 
+import { SiMicrosoftword } from "react-icons/si";
+import { SiMicrosoftpowerpoint } from "react-icons/si";
+import { SiMicrosoft } from "react-icons/si";
+import { FaLinux } from "react-icons/fa";
+import { CgSoftwareDownload } from "react-icons/cg";
+import { GiSmartphone } from "react-icons/gi";
+import { MdOutlineFeed } from "react-icons/md";
+import { FaPerson } from "react-icons/fa6";
+import { RiSlideshow2Line } from "react-icons/ri";
+import { GrIntegration } from "react-icons/gr";
+import { FaCode } from "react-icons/fa6";
+import { SiJulia } from "react-icons/si";
+import { GiRemedy } from "react-icons/gi";
+import { GiMedicines } from "react-icons/gi";
 
-const Cards = ( {project} ) => {
+const Cards = ({ struct }) => {
 
     function getIconComponent(iconName){
     
@@ -42,8 +54,20 @@ const Cards = ( {project} ) => {
             case 'SiNumba': return <SiNumba  className="icons_in_card_size" color="white" />;
             case 'C': return <TbHexagonLetterC  className="icons_in_card_size" color="white" />;
             case 'SiAssemblyscript': return <SiAssemblyscript  className="icons_in_card_size" color="white" />;
-            
-            case 'FaGithub': return <FaGithub  className="icons_in_card_size" color="white" />;
+            case 'SiMicrosoftword': return <SiMicrosoftword  className="icons_in_card_size" color="white" />;
+            case 'SiMicrosoftpowerpoint': return <SiMicrosoftpowerpoint  className="icons_in_card_size" color="white" />;
+            case 'SiMicrosoft': return <SiMicrosoft  className="icons_in_card_size" color="white" />;
+            case 'FaLinux': return <FaLinux  className="icons_in_card_size" color="white" />;
+            case 'CgSoftwareDownload': return <CgSoftwareDownload  className="icons_in_card_size" color="white" />;
+            case 'GiSmartphone': return <GiSmartphone  className="icons_in_card_size" color="white" />;
+            case 'MdOutlineFeed': return <MdOutlineFeed  className="icons_in_card_size" color="white" />;
+            case 'FaPerson': return <FaPerson  className="icons_in_card_size" color="white" />;
+            case 'RiSlideshow2Line': return <RiSlideshow2Line  className="icons_in_card_size" color="white" />;
+            case 'GrIntegration': return <GrIntegration  className="icons_in_card_size" color="white" />;
+            case 'FaCode': return <FaCode  className="icons_in_card_size" color="white" />;
+            case 'SiJulia': return <SiJulia  className="icons_in_card_size" color="white" />;
+            case 'GiRemedy': return <GiRemedy  className="icons_in_card_size" color="white" />;
+            case 'GiMedicines': return <GiMedicines  className="icons_in_card_size" color="white" />;
             default: return null;
         }
     }
@@ -87,45 +111,27 @@ const Cards = ( {project} ) => {
             case 'black_green_2': return '#0b4d49';
             case 'blue_3' : return '#0a3aa8';
             case 'blue_4' : return '#041f5e';
+            case 'red_3' : return '#F02E2E'
+            case 'red_4' : return '#B71C1C'
             default: return null;
     
         }
     }
 
     return (
-        
-        <div className="card">
 
-            <div className="image">
-                <img src={project.img} alt="project" 
-                style={{width: '100%', height: '100%', objectFit: 'cover'}}/>
-            </div>
+        <div className="card_aboutme">
 
-            <div class="content">
+            <div className="info">
+                <h3 className="title_about_cards font-body font-bold">{struct.title}</h3>
+                <h4 className="subtitle">{struct.subtitle}</h4>
+                <p className="desc_aboutme">{struct.description}</p>    
 
-
-                <div class="title">
-
-                    <a href="#">
-                        
-                        <span class="">
-                            {project.title}
-                        </span>
-
-                    </a>
-
-                </div>
-
-                <p class="desc">
-                    {project.description}
-                </p>
-            
-            {/* Renderização dinâmica dos ícones */}
-            <div className="icons_in_card_tex">
+                <div className="icons_in_card_tex_aboutme">
                 
-                    {project.icons.map((icon, index) => (
+                    {struct.icons.map((icon, index) => (
                         
-                        <section key={index} className="icons_in_card_padding">
+                        <section key={index} className="icons_in_card_padding_aboutme">
                             <button
                                 className={`group icons_in_card bg-gradient-to-r from-${icon.color_1} to-${icon.color_2} text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[${icon.code_color_1}] hover:to-[${icon.code_color_2}] p-2`}
                                 style={{background: `linear-gradient(to right, ${getColorComponent(icon.color_1)}, ${getColorComponent(icon.color_2)})`}}
@@ -134,7 +140,7 @@ const Cards = ( {project} ) => {
                                 {getIconComponent(icon.name)}
                                 
                                 <span
-                                    className="description_desc absolute opacity-0 group-hover:opacity-100 group-hover:text-white-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                                    className="description_desc absolute opacity-0 group-hover:opacity-100 group-hover:text-white-700 group-hover:text-sm group-hover:-translate-y-10 duration-700 font-description_about"
                                 >
                                     {icon.description}
                                 </span>
@@ -143,18 +149,9 @@ const Cards = ( {project} ) => {
                     ))}
                 </div>
 
-                <a class="action" href={`${project.link}`} target="_blank" rel="noopener noreferrer">
-                        Descubra mais
-                    <span aria-hidden="true">
-                            →
-                    </span>
-                </a>
-                
             </div>
         </div>
-         
-    )
+    );
+};
 
-}
-
-export default Cards
+export default Cards;

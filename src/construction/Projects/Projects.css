@@ -4,7 +4,7 @@
     background-color: #fff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
-    animation: border-animation 2s linear infinite; /* Adicione a animação aqui */
+    animation: border-animation 2s linear infinite;
 }
 
 .card a {
@@ -34,6 +34,7 @@
     color: #6b7280;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    text-align: justify;
 }
 
 .action {
@@ -49,7 +50,7 @@
     border: 1px solid #414141;
     padding: 4px 8px;
     border-radius: 4px;
-    transition: all 0.3s ease-in-out; /* Adicione a transição */
+    transition: all 0.3s ease-in-out;
 }
 
 .action span {
@@ -184,79 +185,37 @@
 	line-height: 2rem;
 }
 
+
 /* Responsividade */
-@media (min-width: 768px) and (max-width: 1064px) {
+
+@media only screen and (min-width: 200px) and (max-width: 400px){
     .container_projects {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
-    }
-
-    .card {
-        max-width: 350px;
-    }
-
-    .title {
-        font-size: 1rem;
-    }
-
-    .desc {
-        font-size: 0.8rem;
-    }
-
-    .icons_in_card_size {
-        font-size: 15px;
-    }
-
-	.action{
-		font-size: 0.7rem;
-	}
-
-	
-	.text_card_drag p{
-		font-size: 1rem;
-        line-height: 1.5rem;
-	}
-
-}
-
-@media (max-width: 767px) {
-
-	.container_projects {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         padding-left: 0rem;
         padding-right: 0rem;
         row-gap: 1.25rem;
         place-items: center;
-    }
-
-    /* Estilização para o primeiro item em cada linha */
-    .container_projects > :nth-last-child(1) {
-        grid-column: span 2; /* Faz o primeiro item ocupar duas colunas */
-    }
-
-    /* Pseudo-elemento para preencher a primeira metade da segunda coluna em linhas pares */
-    .container_projects::after {
-        content: "";
-        grid-row: span 2; /* Ajuste conforme necessário */
-        grid-column: 2;
-        width: 50%; /* Preenche a primeira metade da segunda coluna */
+        width: 100%;
+        max-height: 5500px;
     }
 
 
 	.card {
-		max-width: 180px;
-        height: 350px;
+		max-width: 330px;
+        max-height: 570px; 
+        width: 100%;
 	}
 
 	.title {
         font-size: 0.7rem;
-        height: 50px;
+        height: 30px;
         text-align: center;
     }
 
 	.desc {
         font-size: 0.7rem;
-        display: none;
+        margin-top: 0;
     }
 
 	.icons_in_card_size {
@@ -273,7 +232,7 @@
     }
 
     .text_card_drag{
-        padding-top: 0.4rem;
+        padding-top: 4rem;
     }
 
 	.text_card_drag p{
@@ -283,13 +242,280 @@
 
     .icons_in_card_padding{
         padding-top: 0rem;
-        margin-top: 0.4rem;
     }
 
     .icons_in_card_tex{
-        margin-top: 0.2rem;
+        margin-top: 1rem;
+        justify-content: center;
+        gap: 0.45rem;
+    }   
+}
+
+@media only screen and (min-width: 400px) and (max-width: 480px){
+    .container_projects {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        row-gap: 1.25rem;
+        place-items: center;
+        width: 100%;
+    }
+
+
+	.card {
+		max-width: 350px;
+        max-height: 550px; 
+        width: 100%;
+	}
+
+	.title {
+        font-size: 0.7rem;
+        height: 30px;
+        text-align: center;
+    }
+
+	.desc {
+        font-size: 0.7rem;
+        margin-top: 0;
+    }
+
+	.icons_in_card_size {
+        font-size: 10px;
+    }
+
+	.action{
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 2px 4px;
+        
+    }
+
+    .text_card_drag{
+        padding-top: 4rem;
+    }
+
+	.text_card_drag p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .icons_in_card_padding{
+        padding-top: 0rem;
+    }
+
+    .icons_in_card_tex{
+        margin-top: 1rem;
         justify-content: center;
         gap: 0.45rem;
     }
+}
 
+@media only screen and (min-width: 480px) and (max-width: 800px){
+    .container_projects {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        row-gap: 1.25rem;
+        place-items: center;
+        width: 100%;
+        max-height: 4500px;
+    }
+
+
+	.card {
+		max-width: 400px;
+        max-height: 500px; 
+        width: 100%;
+	}
+
+	.title {
+        font-size: 0.7rem;
+        height: 30px;
+        text-align: center;
+    }
+
+	.desc {
+        font-size: 0.7rem;
+    }
+
+	.icons_in_card_size {
+        font-size: 10px;
+    }
+
+	.action{
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 2px 4px;
+        
+    }
+
+    .text_card_drag{
+        padding-top: 4rem;
+    }
+
+	.text_card_drag p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .icons_in_card_padding{
+        padding-top: 0rem;
+    }
+
+    .icons_in_card_tex{
+        margin-top: 1rem;
+        justify-content: center;
+        gap: 0.45rem;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1550px){
+    .container_projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        max-height: 550px;
+    }
+
+
+	.card {
+		max-width: 350px;
+        max-height: 550px; 
+        width: 100%;
+	}
+
+	.title {
+        font-size: 0.7rem;
+        height: 30px;
+        text-align: center;
+    }
+
+	.desc {
+        font-size: 0.7rem;
+        height: 200px;
+    }
+
+	.icons_in_card_size {
+        font-size: 10px;
+    }
+
+	.action{
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 2px 4px;
+        
+    }
+
+    .text_card_drag{
+        padding-top: 4rem;
+    }
+
+	.text_card_drag p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .icons_in_card_padding{
+        padding-top: 0rem;
+    }
+
+    .icons_in_card_tex{
+        margin-top: 1rem;
+        justify-content: center;
+        gap: 0.45rem;
+    }
+}
+
+@media only screen and (min-width: 1550px) and (max-width: 1920px){
+    .container_projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        max-height: 550px;
+    }
+
+    .title{
+        font-size: 0.9rem;
+    }
+
+
+	.card {
+		max-width: 450px;
+        max-height: 630px; 
+        width: 100%;
+	}
+
+	.desc {
+        height: 250px;
+        width: 130%;
+    }
+
+    .icons_in_card_padding{
+        padding-top: 0rem;
+    }
+
+    .action{
+        width: 40%;
+    }
+
+    .icons_in_card_size {
+        font-size: 20px;
+    }
+
+    .icons_in_card_tex{
+        width: 130%;
+    }
+
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2550px){
+
+    .card {
+		max-width: 550px;
+        max-height: 650px; 
+        width: 100%;
+	}
+
+    .title{
+        font-size: 1.4rem;
+    }
+
+
+    .desc {
+        height: 200px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .icons_in_card_tex{
+        width: 100%;
+    }
+
+    .icons_in_card_size {
+        font-size: 30px;
+    }
 }

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 import './About.css'
 
@@ -6,7 +8,11 @@ const About = () => {
 
     return (
 
-        <>
+        <motion.div
+            initial={{ y: 1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 2 }}
+        >
         
           
             <div  class="title_about text-white font-body">
@@ -140,11 +146,19 @@ const About = () => {
 
                     </div>
                     
+                    <div class="bottom_about">
+                        <Link to="/about" class="action_about" href="" rel="noopener noreferrer">
+                                Descubra mais sobre minhas experiências
+                            <span aria-hidden="true">
+                                    →
+                            </span>
+                        </Link>
+                    </div>
 
                 </div>
 
             </div>
-        </>
+        </motion.div>
     )
 }
 

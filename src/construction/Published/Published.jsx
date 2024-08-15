@@ -1,6 +1,8 @@
 import React from "react";
 import './Published.css'
 
+import { motion } from "framer-motion";
+
 import { FaPython } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
 import { FaPerson } from "react-icons/fa6";
@@ -13,7 +15,12 @@ import { CgGames } from "react-icons/cg";
 const Published = () => {
     return (
 
-        <div class="font-body">
+        <motion.div 
+            class="font-body"
+            initial={{ y: 1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 4 }}    
+        >
 
             <div  class="title_title_published text-white">
                         
@@ -41,7 +48,7 @@ const Published = () => {
                         </span>
                         </a>
 
-                        <p class="desc_published h-44">
+                        <p class="desc_published">
 
                             A indústria dos videogames é reconhecida como a maior no setor de entretenimento, devido ao
                             grande número de adeptos e ao significativo montante financeiro envolvido. Esse fato não apenas
@@ -222,7 +229,7 @@ const Published = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

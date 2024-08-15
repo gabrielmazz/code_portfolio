@@ -1,0 +1,369 @@
+.container_aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid_experiences_complements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.ajusts_aboutme_cards {
+    font-size: 2.7rem;
+    line-height: 1;
+    padding-top: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+:root {
+    --background-color: #212121;
+    --font: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background-color);
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+}
+
+/* Timeline Container */
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+    border-left: 2px solid #333;
+}
+
+/* Card container */
+.card_aboutme {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    color: gray;
+    background: #1b1b1b;
+    border-radius: 8px;
+    max-width: 630px;
+    animation: border-animation 2s linear infinite;
+}
+
+/* Animação da borda */
+@keyframes border-animation {
+    0% {
+        border-color: #2563eb; /* Cor inicial da borda */
+    }
+    50% {
+        border-color: #e81cff; /* Cor intermediária da borda */
+    }
+    100% {
+        border-color: #2563eb; /* Cor final da borda */
+    }
+}
+
+/* Aplique a animação da borda ao card */
+.card_aboutme {
+    background: linear-gradient(#0e0e0e, #1a1a1a) padding-box,
+        linear-gradient(145deg, transparent 35%, #e81cff, #02b7ff) border-box;
+    border: 2px solid transparent;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* styles.css */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Title of the card */
+.title_about_cards {
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    position: relative;
+}
+
+/* Timeline dot  */
+.title_about_cards::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    left: -39px;
+    border: 3px solid #e81cff;
+}
+
+.subtitle {
+    font-size: 0.7rem;
+}
+
+.title_aboutme {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    font-size: 2.5rem;
+    line-height: 1.75rem;
+}
+
+.icons_in_card_tex_aboutme {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.icons_in_card_padding_aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.text-about-aboutme {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    width: 1400px;
+}
+
+/* @media (min-width: 768px) and (max-width: 1064px){
+  .text-about-aboutme{
+
+    width: 650px;
+
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  .grid_experiences_complements{
+
+    gap: 0rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .title_about_cards{
+    font-size: 1rem;
+  }
+
+  .info{
+    p{
+      font-size: 0.8rem;
+    }
+  }
+
+}
+
+@media (max-width: 767px){
+  .menu__link_title{
+    font-size: 2rem;
+  }
+
+  .text-about-aboutme{
+
+    width: 350px;
+
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  .grid_experiences_complements{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .info{
+    p{
+      font-size: 0.7rem;
+    }
+  }
+
+
+}
+ */
+
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+
+	.menu__link_title{
+		font-size: 2rem;
+	}
+
+	.title_aboutme {
+		font-size: 1.5rem;
+	}
+
+	.text-about-aboutme {
+		width: 300px;
+		font-size: 1rem;
+	}
+
+	.grid_experiences_complements {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+		margin-left: 1.2rem;
+		margin-right: 1.2rem;
+	}
+
+	.info {
+		p {
+			font-size: 0.7rem;
+		}
+	}
+
+	.icons_in_card_tex_aboutme{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 480px){
+	
+	.menu__link_title{
+		font-size: 2rem;
+	}
+
+	.title_aboutme {
+		font-size: 1.5rem;
+	}
+
+	.text-about-aboutme {
+		width: 380px;
+		font-size: 1rem;
+	}
+
+	.grid_experiences_complements {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+
+	.info {
+		p {
+			font-size: 0.7rem;
+		}
+	}
+
+	.icons_in_card_tex_aboutme{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px){
+	
+	.menu__link_title{
+		font-size: 2rem;
+	}
+
+	.title_aboutme {
+		font-size: 1.5rem;
+	}
+
+	.text-about-aboutme {
+		width: 380px;
+		font-size: 1rem;
+	}
+
+	.grid_experiences_complements {
+		display: flex;
+		flex-direction: column;
+		gap: 0rem;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+
+	.info {
+		p {
+			font-size: 0.7rem;
+		}
+	}
+
+	.icons_in_card_tex_aboutme{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1550px){
+
+    .menu__link_title{
+        font-size: 2rem;
+    }
+
+    .title_aboutme {
+        font-size: 1.5rem;
+    }
+
+    .text-about-aboutme {
+        width: 650px;
+        font-size: 1rem;
+    }
+
+    .grid_experiences_complements {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .info {
+        p {
+            font-size: 0.7rem;
+        }
+    }
+
+    .icons_in_card_tex_aboutme{
+        display: flex;
+        justify-content: center;
+    }
+
+}

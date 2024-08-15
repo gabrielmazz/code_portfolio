@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from "framer-motion";
 import './Projects.css'
 
 import Cards from './Cards'
@@ -172,14 +173,51 @@ const Projects = () => {
                 { "name": "IoLogoJavascript", "description": "JavaScript", "color_1": "yellow_1", "color_2": "yellow_2", "code_color_1" : "#ffcc00", "code_color_2" : "#ffab40" },
             ],
             "link": "https://github.com/gabrielmazz/buscador-de-cep"
-        }
+        },
+        
+        {
+            "img": "https://i.imgur.com/aKnj4Ox.png",
+            "title" : "Portfólio",
+            "description": "Este projeto representou o meu primeiro grande trabalho usando o React, com o objetivo de demonstrar um pouco dos meus conhecimentos sobre as tecnologias com as quais já havia trabalhado, desta vez aplicadas em uma escala maior. Durante o desenvolvimento do portfólio, utilizei uma variedade de tecnologias, incluindo rotas e animações, além de outros recursos avançados que enriqueceram a experiência do usuário. Esse projeto não só me permitiu aprimorar minhas habilidades técnicas, como também explorar novas possibilidades e desafios no campo da programação.",
+            "icons":[
+                { "name": "FaReact", "description": "React", "color_1": "sky-blue_1", "color_2": "sky-blue_2", "code_color_1" : "#00b4ff", "code_color_2" : "#0082b2" },
+                { "name": "SiVite", "description": "Vite", "color_1": "purple_1", "color_2": "yellow-python_1", "code_color_1" : "#0a84ff", "code_color_2" : "#0067b8" },
+                { "name": "IoLogoJavascript", "description": "JavaScript", "color_1": "yellow_1", "color_2": "yellow_2", "code_color_1" : "#ffcc00", "code_color_2" : "#ffab40" },
+                { "name": "RiTailwindCssFill", "description": "Tailwind", "color_1": "sky-blue_1", "color_2": "sky-green_1", "code_color_1" : "#00b4ff", "code_color_2" : "#0ed145" },
+                { "name": "SiShadcnui", "description": "Shadcn", "color_1": "black_1", "color_2": "black_2", "code_color_1" : "#000000", "code_color_2" : "#333333" },
+                { "name": "FaGithub", "description": "GitHub", "color_1": "gray_1", "color_2": "black_1", "code_color_1" : "#8e8e93", "code_color_2" : "#000000" },
 
+            ],
+            "link": "https://github.com/gabrielmazz/code_portfolio"
+        },
+
+        {
+            "img": "https://www.unisuam.edu.br/wp-content/uploads/2021/04/qual-e-o-papel-do-nutricionista.jpg",
+            "title" : "Software para Nutricionistas",
+            "description": "Este projeto ainda está em desenvolvimento, mas a ideia é que ele sirva como uma interface para que o nutricionista insira as informações necessárias. Como retorno, a plataforma fornecerá os valores precisos, facilitando o trabalho do profissional e garantindo a qualidade do atendimento.",
+            "icons":[
+                { "name": "FaReact", "description": "React", "color_1": "sky-blue_1", "color_2": "sky-blue_2", "code_color_1" : "#00b4ff", "code_color_2" : "#0082b2" },
+                { "name": "SiVite", "description": "Vite", "color_1": "purple_1", "color_2": "yellow-python_1", "code_color_1" : "#0a84ff", "code_color_2" : "#0067b8" },
+                { "name": "IoLogoJavascript", "description": "JavaScript", "color_1": "yellow_1", "color_2": "yellow_2", "code_color_1" : "#ffcc00", "code_color_2" : "#ffab40" },
+                { "name": "RiTailwindCssFill", "description": "Tailwind", "color_1": "sky-blue_1", "color_2": "sky-green_1", "code_color_1" : "#00b4ff", "code_color_2" : "#0ed145" },
+                { "name": "SiShadcnui", "description": "Shadcn", "color_1": "black_1", "color_2": "black_2", "code_color_1" : "#000000", "code_color_2" : "#333333" },
+                { "name": "FaGithub", "description": "GitHub", "color_1": "gray_1", "color_2": "black_1", "code_color_1" : "#8e8e93", "code_color_2" : "#000000" },
+                { "name": "FaPython", "description": "Python", "color_1": "yellow-python_1", "color_2": "yellow-python_2", "code_color_1" : "#fde047", "code_color_2" : "#fbbf24" },
+            ],
+            "link": "https://github.com/gabrielmazz/nutricionistas"
+        }
+        
     ];
 
     return (
 
 
-        <div class="font-body">
+        <motion.div 
+            class="font-body"
+            initial={{ y: 1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 3 }}
+        >    
 
             <div  class="title_project text-white">
                         
@@ -212,7 +250,7 @@ const Projects = () => {
                             <Cards project={projects[5]} />
 
                             {/* Projeto 07 */}
-                            <Cards project={projects[6]} />
+                            <Cards project={projects[14]} />
 
                             {/* Projeto 08 */}
                             <Cards project={projects[7]} />
@@ -243,6 +281,12 @@ const Projects = () => {
                         {/* Projeto 14 */}
                         <Cards project={projects[13]} />
 
+                        {/* Projeto 15 */}
+                        <Cards project={projects[6]} />
+
+                        {/* Projeto 16 */}
+                        <Cards project={projects[15]} />
+
                     </div>
 
 
@@ -257,7 +301,7 @@ const Projects = () => {
                 <p class="text-white">Arraste para o lado para ver mais projetos</p>
             </div>
 
-        </div>
+        </motion.div>
 
 
         

@@ -7,7 +7,6 @@
     background: linear-gradient(#0e0e0e, #1a1a1a) padding-box,
         linear-gradient(145deg, transparent 35%, #e81cff, #02b7ff) border-box;
     border: 2px solid transparent;
-    padding: 32px 24px;
     font-size: 14px;
     font-family: inherit;
     color: white;
@@ -39,7 +38,10 @@
 }
 
 .content_published {
+    display: flex;
+    flex-direction: column;
     padding: 1.1rem;
+    text-align: justify;
 }
 
 .image_published {
@@ -57,10 +59,12 @@
 }
 
 .desc_published {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #6b7280;
     font-size: 0.875rem;
     line-height: 1.25rem;
+    opacity: 0.7;
 }
 
 
@@ -87,53 +91,92 @@
 
 
 /* Responsividade */
-@media (min-width: 768px) and (max-width: 1064px) {
-
+@media only screen and (min-width: 200px) and (max-width: 400px){
+    
     .card_published{
-        max-width: 640px;
+        max-width: 350px;
     }
 
     .title_published{
         font-size: 1rem;
     }
 
-    .desc_published{
-        font-size: 0.8rem;
-        padding-bottom: 250px;
+
+    .image_published{
+        height: 200px;
     }
 
-
+    .icons_alternate{
+        display: flex;
+        justify-content: center;
+    }
 }
 
-@media (max-width: 767px) {
+@media only screen and (min-width: 400px) and (max-width: 480px){
 
     .card_published{
-        max-width: 370px;
-        height: 520px;
+        max-width: 400px;
     }
 
     .title_published{
-        font-size: 0.8rem;
-        text-align: center;
+        font-size: 1rem;
     }
 
-    .desc_published{
-        font-size: 0.7rem;
-        padding-bottom: 480px;
-        display: none;
 
+    .image_published{
+        height: 250px;
     }
 
-    .title_title_published{
-        font-size: 2.2rem;
+    .icons_alternate{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px){
+
+    .card_published{
+        max-width: 400px;
     }
 
-    .icons_alternate {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    .title_published{
+        font-size: 1rem;
     }
 
+
+    .image_published{
+        height: 300px;
+    }
+
+    .icons_alternate{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1550px){
+
+    .card_published{
+        max-width: 750px;
+    }
+
+    .title_published{
+        font-size: 1.25rem;
+    }
+
+
+    .image_published{
+        height: 350px;
+    }
+
+    .icons_alternate{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2550px){
+    .card_published{
+        max-width: 1300px;
+    }
 }

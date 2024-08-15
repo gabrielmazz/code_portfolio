@@ -338,7 +338,7 @@
 }
 
 /* Responsividade */
-@media (min-width: 768px) and (max-width: 1064px) {
+/* @media (min-width: 768px) and (max-width: 1064px) {
     .container_home {
         display: inline;
         width: 80%;
@@ -370,8 +370,8 @@
 
     .text_4 {
         font-size: 1.1rem;
-        padding-right: 6.5rem;
-        padding-left: 6.5rem;
+        margin-right: 12rem;
+        margin-left: 12rem;
     }
 
 	.lado_esquerdo_botoes{
@@ -433,7 +433,7 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		font-size:1.4rem;
+		font-size: 1.2rem;
 	}
 
 	.text_4 {
@@ -473,4 +473,318 @@
 		padding-top: 40px;
 	}
 
+}
+
+@media (max-width: 400px) {
+
+    .text_3{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .text_4 {
+        font-size: 0.9rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .text_3{
+        font-size: 1rem;
+    }
+    .text_4 {
+		font-size: 0.9rem;
+		padding-right: 3rem;
+		padding-left: 3rem;
+        line-height: 1.5rem;
+	}
+
+    .image_card{
+		width: 200px;
+		height: 200px;
+	}
+}
+
+ */
+
+@media only screen and (min-width: 200px) and (max-width: 400px){
+    .container_home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado_esquerdo {
+        padding-left: 0px;
+        padding-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text_1 {
+        padding-top: 40px;
+        font-size: 1.6rem;
+    }
+
+    .text_2 {
+        font-size: 2rem;
+    }
+
+    .text_3 {
+        font-size: 1rem;
+        justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+
+    .text_4{
+        font-size: 1rem;
+        padding-right: 6rem;
+        padding-left: 6rem;
+    }
+
+    .lado_esquerdo_botoes{
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+
+    .button_instagram, .button_linkedin, .button_github{
+        padding: 5px, 5px;
+        gap: 8px;
+    }
+
+    .button_instagram .text, .button_linkedin .text, .button_github .text{
+        font-size: 0.8rem;
+    }
+
+    .media_icons{
+		font-size: 15px;
+	}
+
+    .photo{
+        padding-right: 0px;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    .image_card{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 480px){
+
+    .container_home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado_esquerdo {
+        padding-left: 0px;
+        padding-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text_1 {
+        padding-top: 40px;
+        font-size: 1.6rem;
+    }
+
+    .text_2 {
+        font-size: 2rem;
+    }
+
+    .text_3 {
+        font-size: 1rem;
+        justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+
+    .text_4{
+        font-size: 1rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .lado_esquerdo_botoes{
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+
+    .button_instagram, .button_linkedin, .button_github{
+        padding: 5px, 5px;
+        gap: 8px;
+    }
+
+    .button_instagram .text, .button_linkedin .text, .button_github .text{
+        font-size: 0.8rem;
+    }
+
+    .media_icons{
+		font-size: 20px;
+	}
+
+    .photo{
+        padding-right: 0px;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    .image_card{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px){
+    
+    .container_home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado_esquerdo {
+        padding-left: 0px;
+        padding-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text_1 {
+        padding-top: 40px;
+        font-size: 1.6rem;
+    }
+
+    .text_2 {
+        font-size: 2rem;
+    }
+
+    .text_3 {
+        font-size: 1rem;
+        justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+
+    .text_4{
+        font-size: 1rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    .lado_esquerdo_botoes{
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+
+    .button_instagram, .button_linkedin, .button_github{
+        padding: 5px, 5px;
+        gap: 8px;
+    }
+
+    .button_instagram .text, .button_linkedin .text, .button_github .text{
+        font-size: 0.8rem;
+    }
+
+    .media_icons{
+		font-size: 20px;
+	}
+
+    .photo{
+        padding-right: 0px;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    .image_card{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1550px){
+
+    .container_home {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lado_esquerdo {
+        padding-left: 0px;
+        padding-top: 0px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text_1 {
+        padding-top: 40px;
+        font-size: 2.7rem;
+    }
+
+    .text_2 {
+        font-size: 4rem;
+    }
+
+    .text_3 {
+        font-size: 1.5rem;
+        justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+
+    .text_4{
+        font-size: 1.2rem;
+        padding-right: 12rem;
+        padding-left: 12rem;
+    }
+
+    .lado_esquerdo_botoes{
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+
+    .button_instagram, .button_linkedin, .button_github{
+        padding: 5px, 5px;
+        gap: 8px;
+    }
+
+    .button_instagram .text, .button_linkedin .text, .button_github .text{
+        font-size: 0.8rem;
+    }
+
+    .media_icons{
+		font-size: 20px;
+	}
+
+    .photo{
+        padding-right: 0px;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    .image_card{
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+@media only screen and (min-width: 820px) and (max-width: 1550px){
+
+    .text_4{
+        font-size: 1.2rem;
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
 }
